@@ -1,0 +1,310 @@
+/* --- LAYOUT (Linked to global theme variables) --- */
+.admin-page-modern {
+  background-color: var(--store-bg);
+  min-height: 100vh;
+  color: var(--text-white);
+}
+
+.admin-container-modern {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-header-modern {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.admin-title-modern {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.admin-subtitle-modern {
+  color: var(--text-gray);
+  margin-top: 10px;
+  font-family: 'Orbitron', monospace;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.status-online {
+  color: var(--store-accent);
+  font-weight: bold;
+}
+
+/* --- LOGOUT BUTTON --- */
+.logout-btn-modern {
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  padding: 12px 25px;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.logout-btn-modern:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+/* --- STAT CARDS --- */
+.admin-cards-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.glass-card {
+  background: var(--store-panel);
+  padding: 25px;
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 210, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+.card-label {
+  font-family: 'Orbitron', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--store-accent);
+  letter-spacing: 1px;
+}
+
+.card-value {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.card-trend {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.card-trend.up { color: #00ff88; }
+
+/* --- TABLE SECTION --- */
+.orders-section-modern {
+  overflow: hidden;
+  padding: 0;
+}
+
+.section-header-modern {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-header-modern h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.table-filters-modern {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-pill-modern {
+  padding: 8px 18px;
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--text-gray);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-pill-modern:hover {
+  border-color: var(--store-accent);
+  color: var(--store-accent);
+}
+
+.filter-pill-modern.active {
+  background: var(--store-accent);
+  color: #000;
+  border-color: var(--store-accent);
+}
+
+/* --- TABLE STYLING --- */
+.table-wrapper-modern {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: rgba(0,0,0,0.2);
+  text-align: left;
+  padding: 20px 24px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  color: var(--store-accent);
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 14px;
+  color: var(--text-gray);
+}
+
+.bright-text {
+  color: #fff;
+}
+
+.dim-text {
+  color: #888;
+}
+
+.price-cell-modern {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--store-accent);
+  font-weight: 700;
+}
+
+.status-pill-modern {
+  padding: 5px 12px;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  border: 1px solid transparent;
+}
+
+.status-pill-modern.success {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  border-color: rgba(0, 255, 136, 0.3);
+}
+
+/* --- MANAGEMENT SECTION --- */
+.management-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.add-game-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.add-game-form input, 
+.add-game-form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  border-radius: var(--store-radius);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.add-game-form input:focus, 
+.add-game-form textarea:focus {
+  border-color: var(--store-accent);
+  background: rgba(0, 210, 255, 0.05);
+}
+
+.add-game-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-btn-modern {
+  background: var(--store-accent);
+  color: #000;
+  border: none;
+  padding: 15px;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.submit-btn-modern:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- DELETE ACTION --- */
+.delete-action-btn {
+  background: rgba(255, 77, 77, 0.1);
+  color: #ff4d4d;
+  border: 1px solid rgba(255, 77, 77, 0.3);
+  padding: 6px 15px;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-action-btn:hover {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+.empty-msg-modern {
+  padding: 40px;
+  text-align: center;
+  color: #555;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}

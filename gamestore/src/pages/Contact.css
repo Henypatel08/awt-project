@@ -1,0 +1,123 @@
+.contact-page {
+  min-height: 100vh;
+  background: var(--store-bg);
+  color: var(--store-text);
+}
+
+.contact-box {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--store-panel);
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(0, 210, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.contact-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact-box > p {
+  color: var(--text-gray);
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.my-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-form label {
+  color: var(--text-gray);
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+}
+
+.my-form input,
+.my-form textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--store-radius);
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.my-form input:focus,
+.my-form textarea:focus {
+  border-color: var(--store-accent);
+  background: #ffffff;
+}
+
+.my-form button {
+  padding: 15px;
+  background: var(--store-accent);
+  border: none;
+  color: #000;
+  cursor: pointer;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.my-form button:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.contact-info {
+  flex: 0.5;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 30px;
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-info h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--store-accent);
+  padding-bottom: 10px;
+}
+
+.contact-info p {
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.contact-info b {
+  color: var(--store-accent);
+  margin-right: 10px;
+  font-family: 'Orbitron', sans-serif;
+}

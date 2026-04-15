@@ -1,0 +1,78 @@
+/* 🌌 FOOTER MAIN */
+.footer {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #ccc;
+  padding: 50px 10% 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ GLOW EFFECT */
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #00f5ff;
+  filter: blur(120px);
+  opacity: 0.15;
+  top: -50px;
+  left: -50px;
+}
+
+/* GRID */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* BRAND */
+.footer-brand h2 {
+  color: #00f5ff;
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+.footer-links h3,
+.footer-social h3 {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: #aaa;
+  margin-bottom: 6px;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #00f5ff;
+  transform: translateX(5px);
+}
+
+/* SOCIAL ICONS */
+.icons span {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons span:hover {
+  transform: scale(1.2);
+  color: #00f5ff;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+}

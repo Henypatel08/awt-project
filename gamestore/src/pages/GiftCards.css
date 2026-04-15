@@ -1,0 +1,104 @@
+.gift-cards-page {
+  min-height: 100vh;
+  background: var(--store-bg);
+  color: var(--store-text);
+  padding-bottom: 50px;
+}
+
+.gift-cards-container {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.gift-cards-container h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.gift-cards-container p {
+  color: var(--text-gray);
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.gift-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.gift-card-modern {
+  width: 250px;
+  background: var(--store-panel);
+  padding: 30px;
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.gift-card-modern:hover {
+  transform: translateY(-10px);
+  border-color: var(--store-accent);
+}
+
+.gift-card-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.gift-card-modern h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: #fff;
+  margin: 0;
+}
+
+.buy-gift-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--store-accent);
+  border: none;
+  color: #000;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.buy-gift-btn:hover {
+  background: #fff;
+}
+
+.back-to-store-btn {
+  background: transparent;
+  color: var(--store-accent);
+  border: 1px solid var(--store-accent);
+  padding: 12px 25px;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.back-to-store-btn:hover {
+  background: var(--store-accent);
+  color: #000;
+}

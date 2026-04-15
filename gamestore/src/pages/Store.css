@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+
+/* --- STORE EXCLUSIVE VARIABLES --- */
+:root {
+  --store-bg: #050510;
+  --store-panel: rgba(20, 20, 30, 0.7);
+  --store-accent: #00d2ff;
+  --store-text: #e0e0e0;
+}
+
+/* --- BASE --- */
+.store-container-modern {
+  background: var(--store-bg);
+  min-height: 100vh;
+  color: var(--store-text);
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- HEADER / SEARCH --- */
+.store-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: radial-gradient(circle at center, rgba(0, 210, 255, 0.1) 0%, var(--store-bg) 70%);
+  border-bottom: 1px solid rgba(0, 210, 255, 0.15);
+}
+
+.store-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.store-header p {
+  font-size: 1.2rem;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+.store-search-bar {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: var(--store-radius);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.store-search-bar:focus {
+  border-color: var(--store-accent);
+  background: rgba(0, 210, 255, 0.05);
+}
+
+/* --- MAIN LAYOUT --- */
+.store-main-layout {
+  padding: 60px 8%;
+}
+
+.store-category-section {
+  margin-bottom: 80px;
+}
+
+.store-section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  border-left: 5px solid var(--store-accent);
+  padding-left: 15px;
+}
+
+/* --- GAME GRID --- */
+.store-game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.store-modern-card {
+  background: var(--store-panel);
+  border-radius: var(--store-radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.store-modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 210, 255, 0.3);
+}
+
+.store-card-image {
+  position: relative;
+  height: 180px; /* Cinematic banner height */
+  overflow: hidden;
+  background: var(--store-bg);
+}
+
+.store-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.store-modern-card:hover .store-card-image img {
+  transform: scale(1.1);
+}
+
+.store-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.store-modern-card:hover .store-card-overlay {
+  opacity: 1;
+}
+
+.store-buy-btn {
+  background: var(--store-accent);
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: var(--store-radius);
+  transition: all 0.3s ease;
+}
+
+.store-buy-btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+}
+
+.store-card-content {
+  padding: 20px;
+}
+
+.store-card-content h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.store-card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.store-price {
+  font-weight: 700;
+  color: var(--store-accent);
+  font-size: 1.1rem;
+}
+
+.store-rating {
+  font-size: 0.9rem;
+  background: rgba(255, 215, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .store-header h1 {
+    font-size: 2.5rem;
+  }
+}

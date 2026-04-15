@@ -1,0 +1,155 @@
+/* Auth Container (Inherits body background from index.css) */
+.auth-page {
+  min-height: 100vh;
+  background: var(--store-bg);
+  color: var(--store-text);
+  overflow: hidden;
+}
+
+.form-container {
+  width: 380px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  background: var(--store-panel); /* frosted glass backend */
+  padding: 40px;
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(0, 210, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  color: var(--store-accent);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.form-container input {
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: var(--store-radius);
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  padding-right: 60px; /* Space for the SHOW/HIDE button */
+}
+
+.show-password-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent !important;
+  border: none !important;
+  color: #00bfff !important;
+  font-size: 11px !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 900 !important;
+  padding: 10px !important;
+  margin: 0 !important;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.show-password-btn:hover {
+  color: var(--store-accent) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.form-container input::placeholder {
+  color: #666;
+}
+
+.form-container input:focus {
+  border-color: var(--store-accent);
+  background: #ffffff;
+}
+
+.form-container button {
+  padding: 15px;
+  background: var(--store-accent);
+  border: none;
+  color: #000;
+  cursor: pointer;
+  border-radius: var(--store-radius);
+  margin-top: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.form-container button:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #aaa;
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-switch span {
+  color: var(--store-accent);
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.auth-switch span:hover {
+  color: #fff;
+}
+
+.error-text, .error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.success {
+  color: #00e676;
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}

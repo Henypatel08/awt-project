@@ -1,0 +1,14 @@
+{
+  "name": "awt-project",
+  "version": "1.0.0",
+  "description": "Fullstack Game Store application",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm start --prefix gamestore",
+    "install-all": "npm install && npm install --prefix backend && npm install --prefix gamestore"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

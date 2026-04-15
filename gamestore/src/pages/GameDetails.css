@@ -1,0 +1,91 @@
+.game-details-page {
+  min-height: 100vh;
+  background: var(--store-bg);
+  color: var(--store-text);
+  padding-bottom: 50px;
+}
+
+.game-details-container-modern {
+  max-width: 1000px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  background: var(--store-panel);
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.game-image-modern {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.game-info-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-info-modern h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.game-price-modern {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: var(--store-accent);
+  font-weight: 900;
+}
+
+.game-description-modern {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.buy-btn-modern {
+  align-self: flex-start;
+  padding: 15px 40px;
+  background: var(--store-accent);
+  border: none;
+  color: #000;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.buy-btn-modern:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .game-details-container-modern {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .game-image-modern {
+    width: 40%;
+  }
+  .game-info-modern {
+    width: 60%;
+  }
+}

@@ -1,0 +1,121 @@
+.checkout-page {
+  min-height: 100vh;
+  background: var(--store-bg);
+  color: var(--store-text);
+}
+
+.checkout-container-modern {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--store-panel);
+  border-radius: var(--store-radius);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.checkout-container-modern h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.payment-option-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.payment-label-modern {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--store-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+
+.payment-label-modern:hover {
+  background: rgba(0, 210, 255, 0.1);
+  border-color: var(--store-accent);
+}
+
+.payment-label-modern input {
+  margin-right: 15px;
+  accent-color: var(--store-accent);
+}
+
+.payment-form-modern {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-form-modern input {
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: var(--store-radius);
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.payment-form-modern input:focus {
+  border-color: var(--store-accent);
+}
+
+.checkout-btn-modern {
+  width: 100%;
+  padding: 15px;
+  background: var(--store-accent);
+  border: none;
+  color: #000;
+  border-radius: var(--store-radius);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.checkout-btn-modern:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.error-message-modern {
+  color: #ff4d4d;
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.payment-message-modern {
+  margin-top: 20px;
+  color: #00ff88;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 480px) {
+  .checkout-container-modern {
+    padding: 20px;
+  }
+}
