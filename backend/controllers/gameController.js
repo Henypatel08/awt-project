@@ -3,10 +3,13 @@ import Game from '../models/Game.js';
 // @desc    Get all games
 // @route   GET /api/games
 export const getGames = async (req, res) => {
+    console.log('[GAMES] Fetching all games from database...');
     try {
         const games = await Game.find({});
+        console.log(`[GAMES] SUCCESS: Found ${games.length} games.`);
         res.json(games);
     } catch (error) {
+        console.error(`[GAMES] ERROR fetching games: ${error.message}`);
         res.status(500).json({ message: error.message });
     }
 };

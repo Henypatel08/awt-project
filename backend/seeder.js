@@ -4,7 +4,6 @@ import Game from './models/Game.js';
 import dbConnect from './config/db.js';
 
 dotenv.config();
-dbConnect();
 
 const games = [
     {
@@ -47,12 +46,16 @@ const games = [
 
 const importData = async () => {
     try {
+        // Essential: wait for connection before doing anything
+        await dbConnect();
+        
         await Game.deleteMany();
         await Game.insertMany(games);
-        console.log('Data Imported!');
+        
+        console.log('Data Imported successfully to the database!');
         process.exit();
     } catch (error) {
-        console.error(`${error}`);
+        console.error(`Error importing data: ${error.message}`);
         process.exit(1);
     }
 };

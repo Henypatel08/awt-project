@@ -8,9 +8,6 @@ import gameRoutes from './routes/gameRouter.js';
 // Load env vars
 dotenv.config();
 
-// Connect to database
-dbConnect();
-
 const app = express();
 
 // Body parser
@@ -38,6 +35,16 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
-});
+const startServer = async () => {
+    try {
+        await dbConnect();
+
+        app.listen(PORT, () => {
+            console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
+        });
+    } catch (error) {
+        process.exit(1);
+    }
+};
+
+startServer();

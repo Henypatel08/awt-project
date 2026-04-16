@@ -12,11 +12,13 @@ const generateToken = (id) => {
 // @route   POST /api/auth/register
 export const registerUser = async (req, res) => {
     const { name, email, password, role } = req.body;
+    console.log(`[AUTH] Registration attempt for: ${email}`);
 
     try {
         const userExists = await User.findOne({ email });
 
         if (userExists) {
+            console.log(`[AUTH] Registration failed: User ${email} already exists`);
             return res.status(400).json({ message: 'User already exists' });
         }
 
@@ -28,6 +30,7 @@ export const registerUser = async (req, res) => {
         });
 
         if (user) {
+            console.log(`[AUTH] Registration SUCCESS: Created user ${email} (${user.role})`);
             res.status(201).json({
                 _id: user._id,
                 name: user.name,
@@ -36,10 +39,12 @@ export const registerUser = async (req, res) => {
                 token: generateToken(user._id)
             });
         } else {
+            console.log(`[AUTH] Registration FAILED: Invalid user data for ${email}`);
             res.status(400).json({ message: 'Invalid user data' });
         }
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        console.error(`[AUTH] CRITICAL ERROR during registration for ${email}: ${error.message}`);
+        res.status(500).json({ message: "Server error during registration. Check backend logs." });
     }
 };
 
@@ -55,17 +60,19 @@ export const loginUser = async (req, res) => {
     console.log(`[AUTH] Login attempt for: ${email}`);
 
     try {
+        console.log(`[AUTH] Database lookup for: ${email}`);
         const user = await User.findOne({ email });
 
         if (!user) {
-            console.log(`[AUTH] Login failed: User not found`);
+            console.log(`[AUTH] Login failed: User ${email} NOT FOUND in database`);
             return res.status(401).json({ message: 'Invalid email or password' });
         }
 
+        console.log(`[AUTH] User found, verifying password...`);
         const isMatch = await user.matchPassword(password);
         
         if (isMatch) {
-            console.log(`[AUTH] Login success: ${email} (${user.role})`);
+            console.log(`[AUTH] Login SUCCESS: ${email} authenticated (${user.role})`);
             res.json({
                 _id: user._id,
                 name: user.name,
@@ -74,11 +81,11 @@ export const loginUser = async (req, res) => {
                 token: generateToken(user._id)
             });
         } else {
-            console.log(`[AUTH] Login failed: Password mismatch for ${email}`);
+            console.log(`[AUTH] Login FAILED: Password mismatch for ${email}`);
             res.status(401).json({ message: 'Invalid email or password' });
         }
     } catch (error) {
-        console.error(`[AUTH] Error during login: ${error.message}`);
-        res.status(500).json({ message: error.message });
+        console.error(`[AUTH] CRITICAL ERROR during login for ${email}: ${error.message}`);
+        res.status(500).json({ message: "Server error during login. Check backend logs." });
     }
 };
